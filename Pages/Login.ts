@@ -1,7 +1,5 @@
 import {Page,Locator,expect} from '@playwright/test';
-import { url } from 'node:inspector';
-import { TestData } from './Test data/Testd';
-
+import { TestData } from '../Test data/Testd';
 
 
 export class Login
@@ -24,7 +22,7 @@ this.LButton = page.locator("//*[@id= 'login-button']");
 
 async urlfun()
 {
-await this.page.goto("https://www.saucedemo.com/");
+await this.page.goto(TestData.urls.Base);
 
 }
 
@@ -34,5 +32,4 @@ await this.username.fill(TestData.user.username);
 await this.Password.fill(TestData.user.password);
 await this.LButton.click();
 }
- 
 }

@@ -15,12 +15,8 @@ await use(new Login(page));
 
 },
 inve: async({page},use)=>{
-
 await use(new inventory(page));
-
 },
 
-
 })
-
 export {expect} from '@playwright/test'

@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {Login} from '../Pages/Login'
-import { TestData } from '../Pages/Test data/Testd';
+import { TestData } from '../Test data/Testd';
 
 test('Login',async ({page}) =>{
 
