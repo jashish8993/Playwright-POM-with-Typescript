@@ -7,7 +7,7 @@ test('Login',async ({page}) =>{
 const Logg = new Login(page);
 await Logg.urlfun();
 await Logg.login();
-await expect(page).toHaveURL(TestData.urls.carturl);
+await expect(page).toHaveURL(TestData.urls.inventoryu);
 
 }
 )
