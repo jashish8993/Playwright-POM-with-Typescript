@@ -12,12 +12,16 @@ this.Hamburgermenu = page.locator("//button[@id= 'react-burger-menu-btn']");
 this.HamburgerClose = page.locator("//button[@id= 'react-burger-cross-btn']");
 }
 
-async operations()
+async OpenOperations()
 {
 await this.Hamburgermenu.click();
 await this.page.waitForTimeout(4000);
-await this.HamburgerClose.click();
+}
 
+async CloseOperations()
+{
+await this.page.waitForTimeout(4000);
+await this.HamburgerClose.click();
 }
 
 }

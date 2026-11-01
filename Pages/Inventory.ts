@@ -6,23 +6,33 @@ export class inventory{
 page: Page;
 ulink : Locator;
 ucart :Locator;
-//header : headerComponent;
+header : headerComponent;
 lcontainer :Locator;
 ucheckout : Locator;
 lcontinue : Locator;
 lcard :Locator;
-
+allItems : Locator;
+DynamicCat : Locator;
+About : Locator;
+Logout : Locator;
+Reset : Locator;
 
 constructor(page: Page)
 {
 this.page=page;
-//this.header = new headerComponent(page);
+this.header = new headerComponent(page);
 this.ulink=page.locator("//*[text()='Sauce Labs Bike Light']");
 this.ucart=page.locator("//*[text()='Add to cart']");
 this.lcontainer=page.locator("//div[@id='shopping_cart_container']");
 this.ucheckout =page.getByRole('button',{name: 'Checkout'});
 this.lcontinue =page.getByRole('button',{name: 'continue'});
 this.lcard =page.locator("//*[text() = 'Error: First Name is required']");
+this.allItems =page.locator("//a[text()='All Items']");
+this.DynamicCat =page.locator("//a[text()='Dynamic Catalog']");
+this.About =page.locator("//a[text()='About']");
+this.Logout =page.locator("//a[text()='Logout']");
+this.Reset =page.locator("//a[text()='Reset App State']");
+
 }
 
 async clicky()
@@ -39,6 +49,8 @@ await this.lcontainer.click();
 await this.ucheckout.click();
 await this.lcontinue.click();
 }
+
+
 
 
 }
